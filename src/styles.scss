@@ -1,0 +1,41 @@
+/* You can add global styles to this file, and also import other style files */
+$mainColor: #4caf50;
+$mainHoverColor: #1e9622;
+$mainDisbaledColor: #70e074;
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.navbar {
+  border-bottom: 2px solid $mainColor;
+}
+
+.navbar-light .navbar-brand {
+  color: $mainColor;
+}
+
+.list-group-item.active {
+  background-color: $mainColor;
+  border-color: $mainColor;
+}
+
+.btn-primary {
+  background-color: $mainColor;
+  border-color: $mainColor;
+}
+.btn-primary:hover {
+  background-color: $mainHoverColor;
+  border-color: $mainHoverColor;
+}
+.btn-primary:disabled {
+  background-color: $mainDisbaledColor;
+  border-color: $mainDisbaledColor;
+}
+
+.form-control:focus {
+  box-shadow: none;
+  border-color: $mainColor;
+  outline: 0px;
+}

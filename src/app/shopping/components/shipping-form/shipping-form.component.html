@@ -1,0 +1,75 @@
+<form #f="ngForm" (ngSubmit)="placeOrder()">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input
+        required
+        [(ngModel)]="shipping.name"
+        name="name"
+        #name="ngModel"
+        type="text"
+        class="form-control"
+        id="name"
+      />
+      <div class="alert alert-danger" *ngIf="name.touched && name.invalid">
+        <span *ngIf="name.errors?.['required']">Name field is required.</span>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="addressLine1">Address</label>
+      <input
+        required
+        [(ngModel)]="shipping.addressLine1"
+        name="addressLine1"
+        #addressLine1="ngModel"
+        type="adresse"
+        class="form-control"
+        id="addressLine1"
+        placeholder="Line 1"
+      />
+      <div
+        class="alert alert-danger"
+        *ngIf="addressLine1.touched && addressLine1.invalid"
+      >
+        <span *ngIf="addressLine1.errors?.['required']"
+          >Adrress field is required.</span
+        >
+      </div>
+    </div>
+    <div class="form-group">
+      <input
+        required
+        [(ngModel)]="shipping.addressLine2"
+        name="addressLine2"
+        #addressLine2="ngModel"
+        type="adresse"
+        class="form-control"
+        placeholder="Line 2"
+      />
+      <div
+        class="alert alert-danger"
+        *ngIf="addressLine2.touched && addressLine2.invalid"
+      >
+        <span *ngIf="addressLine2.errors?.['required']"
+          >Adrress field is required.</span
+        >
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="city">City</label>
+      <input
+        required
+        [(ngModel)]="shipping.city"
+        name="city"
+        #city="ngModel"
+        type="text"
+        class="form-control"
+        id="city"
+      />
+      <div class="alert alert-danger" *ngIf="city.touched && city.invalid">
+        <span *ngIf="city.errors?.['required']">City field is required.</span>
+      </div>
+    </div>
+    <button class="btn btn-primary" [disabled]="f.invalid">
+      Place Order
+    </button>
+  </form>

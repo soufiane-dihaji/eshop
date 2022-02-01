@@ -1,0 +1,11 @@
+{
+  "hosting": {
+    "public": "dist/e-shop",
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}

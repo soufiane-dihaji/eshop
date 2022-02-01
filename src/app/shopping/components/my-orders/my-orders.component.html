@@ -1,0 +1,4 @@
+<h1>My orders</h1>
+<ng-container *ngIf="orders$ | async as orders">
+  <order-list [orders]="orders"></order-list>
+</ng-container>
